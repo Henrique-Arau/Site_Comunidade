@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-  <div class="classe1">
-    <h1 style="color: blue">Beleza, Meu 1º site está no ar!!!!!!!!!!! To sabendo muito</h1>
-    <p>Esse site está ficando legal</p>
-    <h2>Testando novo arquivo</h2>
-
-  </div>
+{% extends 'base.html' %}
 
 
+{% block body %}
+      <div class="container">
+        <h1>Beleza, Meu 1º site está no ar!!!!!!!!!!! To sabendo muito</h1>
+        <p>Esse site está ficando legal</p>
+        <h2>Testando novo arquivo</h2>
 
-</body>
-</html>
+      </div>
+{% endblock %}
