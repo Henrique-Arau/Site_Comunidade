@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
@@ -6,7 +6,7 @@ lista_usuarios = ['Lira', 'João', 'Alon', 'Alessandra', 'Amanda']
 
 
 @app.route('/')
-def hello_world():
+def home():
     return render_template('home.html')
 
 
