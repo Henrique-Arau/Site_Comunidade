@@ -30,7 +30,7 @@
                             <div class="form-group">
                                 {{ form_login.senha.label(class="form-control-label") }}
 
-                                 {% if form_login.senha.errors %}
+                                {% if form_login.senha.errors %}
                                     {{ form_login.senha(class="form-control is-invalid") }}
                                 <div class="invalid-feedback">
                                     {% for erro in form_login.senha.errors %}
@@ -89,7 +89,7 @@
                             
                             <div class="form-group">
                             {{ form_criarconta.senha.label(class="form-control-label") }}
-                                
+
                              {% if form_criarconta.senha.errors %}
                                     {{ form_criarconta.senha(class="form-control is-invalid") }}
                                 <div class="invalid-feedback">
