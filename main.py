@@ -4,10 +4,10 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-lista_usuarios = ['Lira', 'João', 'Alon', 'Alessandra', 'Amanda']
+lista_usuarios = ['Henrique', 'João', 'Alon', 'Alessandra', 'Amanda']
 
 app.config['SECRET_KEY'] = '4fa8fdaf59fcb947808e183c48fcda81'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqLite:///comunidade.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///comunidade.db'
 
 database = SQLAlchemy(app)
 
