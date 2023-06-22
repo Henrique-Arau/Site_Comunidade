@@ -6,6 +6,7 @@
 Criando as tabelas no Banco de dados
 
 >>> from main import app
+
 >>> from main import database
 >>>
 >>> from comunidadeImpressionadora import database
