@@ -38,5 +38,6 @@ Verificar Post criado no banco de dados
 >>> post = Post.query.first()
 
 >>> post.titulo
+
 >>> post.corpo
 
