@@ -90,6 +90,15 @@ def salvar_imagem(imagem):
 
     return nome_arquivo
 
+def atualizar_cursos(form):
+    lista_cursos = []
+    for campo in form:
+        if 'curso' in campo.name:
+            #adicionar o texto do campo.label (Excel Impressionador) na lista de cursos
+            if campo.data:
+                lista_cursos.append(campo.label.text)
+    return ';'.join(lista_cursos)
+
 @app.route('/perfil/editar', methods=['GET', 'POST'])
 @login_required
 def editar_perfil():
@@ -101,6 +110,7 @@ def editar_perfil():
             # adicionar um codigo aleatorio no nome da imagem
             nome_imagem = salvar_imagem(form.foto_perfil.data)
             current_user.foto_perfil =nome_imagem
+        current_user.cursos = atualizar_cursos(form)
         database.session.commit()
         flash('Perfil atualizado com Sucesso', 'alert-success')
         return redirect(url_for('perfil'))
