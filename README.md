@@ -28,3 +28,15 @@ Verificar usuario criado no banco de dados
 
 >>> usuario.username
 
+Verificar Post criado no banco de dados
+
+
+>>> from comunidadeImpressionadora import database
+
+>>> from comunidadeImpressionadora.models import Post
+
+>>> post = Post.query.first()
+
+>>> post.titulo
+>>> post.corpo
+
