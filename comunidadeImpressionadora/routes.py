@@ -1,4 +1,4 @@
-from flask import render_template, redirect, url_for, flash, request
+from flask import render_template, redirect, url_for, flash, request, abort
 from comunidadeImpressionadora import app, database, bcrypt
 from comunidadeImpressionadora.forms import FormLogin, FormCriarConta, FormEditarPerfil, FormCriarPost
 from comunidadeImpressionadora.models import Usuario, Post
@@ -149,3 +149,16 @@ def exibir_post(post_id):
 
     return render_template('post.html', post=post, form=form)
 
+
+
+@app.route('/post/<post_id>/excluir', methods=['GET', 'POST'])
+@login_required
+def excluir_post(post_id):
+    post = Post.query.get(post_id)
+    if current_user == post.autor:
+        database.session.delete(post)
+        database.session.commit()
+        flash('Post excluido com sucesso', 'alert-danger')
+        return redirect(url_for('home'))
+    else:
+         abort(403)
