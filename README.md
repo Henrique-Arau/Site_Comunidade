@@ -56,3 +56,4 @@ Verificar Post criado no banco de dados
 
 >>> post.corpo
 
+![image](https://github.com/Henrique-Arau/Site_Comunidade/assets/83648293/d55b46e1-403e-4861-abeb-e9379a732009)
