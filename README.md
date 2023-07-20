@@ -1,3 +1,18 @@
+Nesse site contém
+
+*Alteração de usuários
+*Login de usu[arios
+*Criação de usuários
+*Incluir Posts, Excluir posts e editar posts
+*Filtra informações dentro de um Banco de dados
+* Banco de dados usando flasks
+* Lista de usuários
+* Trabalha com imagens
+
+
+
+
+
 >>> import secrets
 >>> secrets.token_hex(16)
 
