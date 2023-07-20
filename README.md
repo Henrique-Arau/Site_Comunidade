@@ -1,3 +1,18 @@
+Nesse site contém
+
+* Alteração de usuários
+* Login de usu[arios
+* Criação de usuários
+* Incluir Posts, Excluir posts e editar posts
+* Filtra informações dentro de um Banco de dados
+* Banco de dados usando flasks
+* Lista de usuários
+* Trabalha com imagens
+
+
+
+
+
 >>> import secrets
 >>> secrets.token_hex(16)
 
@@ -41,3 +56,4 @@ Verificar Post criado no banco de dados
 
 >>> post.corpo
 
+![image](https://github.com/Henrique-Arau/Site_Comunidade/assets/83648293/d55b46e1-403e-4861-abeb-e9379a732009)
